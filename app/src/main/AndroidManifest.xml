@@ -13,13 +13,22 @@
         android:theme="@style/Theme.Remipics"
         tools:targetApi="31">
         <activity
+            android:name=".DashMemoria"
+            android:exported="false" />
+        <activity
+            android:name=".DashConAlbum"
+            android:exported="false" />
+        <activity
+            android:name=".CrearAlbum"
+            android:exported="false" />
+        <activity
             android:name=".PermisoUbi"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".permiso_img"
+            android:name=".PermisoImg"
             android:exported="false" />
         <activity
             android:name=".Loading"

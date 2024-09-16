@@ -6,4 +6,7 @@
     <color name="azul">#00AAFF</color>
     <color name="azul_oscuro">#037DBA</color>
     <color name="azul_claro">#D0ECEA</color>
+    <color name="btn_secundario">#E3E3E3</color>
+    <color name="txt_secundario">#79747E</color>
+    <color name="btn_primario">#00AAFF</color>
 </resources>
