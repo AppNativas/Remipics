@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".permiso_img">
+    tools:context=".PermisoUbi">
 
 
     <View
@@ -111,7 +111,7 @@
         android:layout_height="99dp"
 
         android:gravity="center"
-        android:text="¿Quieres permitir que Remipics acceda a las fotos y el contenido multimedia del dispositivo?"
+        android:text="¿Quieres permitir que Remipics acceda a la ubicacion de este dispositivo?"
         android:textSize="19dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/modal_permiso_ubi"
@@ -173,6 +173,14 @@
         app:layout_constraintStart_toStartOf="@+id/modal_permiso_ubi"
         app:layout_constraintTop_toTopOf="@+id/modal_permiso_ubi"
         app:layout_constraintVertical_bias="0.931" />
+
+
+
+
+
+
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
