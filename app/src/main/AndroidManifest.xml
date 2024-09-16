@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Remipics"
         tools:targetApi="31">
         <activity
+            android:name=".permiso_img"
+            android:exported="false" />
+        <activity
             android:name=".Loading"
             android:exported="true">
             <intent-filter>
@@ -22,7 +25,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".DashPrincipal"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
