@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EditarAlbum">
+    tools:context=".FiltroAlbum">
 
         <View
             android:id="@+id/frame_nav"
@@ -41,7 +41,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.035"
-            app:srcCompat="@drawable/icon_filtro_f" />
+            app:srcCompat="@drawable/icon_filtro_f_s" />
 
         <ImageView
             android:id="@+id/icon_cuenta"
@@ -147,45 +147,7 @@
             app:layout_constraintStart_toStartOf="@+id/frame_album"
             app:layout_constraintTop_toTopOf="@+id/frame_album"
             app:layout_constraintVertical_bias="0.881"
-            app:srcCompat="@drawable/icon_check_selec" />
-
-        <View
-            android:id="@+id/cont_selec_a"
-            android:layout_width="393dp"
-            android:layout_height="72dp"
-            android:background="@color/gris_clarito"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.096" />
-
-        <TextView
-            android:id="@+id/txt_select_a"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="1 Elemento Seleccionado"
-            android:textStyle="bold"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="@+id/cont_selec_a"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/cont_selec_a"
-            app:layout_constraintTop_toBottomOf="@+id/frame_nav" />
-
-        <ImageView
-            android:id="@+id/icon_cerrar_selec"
-            android:layout_width="46dp"
-            android:layout_height="33dp"
-            android:layout_marginStart="28dp"
-            app:layout_constraintBottom_toBottomOf="@+id/cont_selec_a"
-            app:layout_constraintEnd_toStartOf="@+id/txt_select_a"
-            app:layout_constraintStart_toStartOf="@+id/cont_selec_a"
-            app:layout_constraintTop_toBottomOf="@+id/frame_nav"
-            app:layout_constraintVertical_bias="0.468"
-            app:srcCompat="@drawable/icon_cerrar_selec" />
-
-
+            app:srcCompat="@drawable/icon_puntos" />
         <View
             android:id="@+id/tapar"
             android:layout_width="396dp"
@@ -212,75 +174,15 @@
 
 
         <View
-            android:id="@+id/modal_editar_a"
-            android:layout_width="339dp"
-            android:layout_height="169dp"
+            android:id="@+id/modal_selecciona_fecha"
+            android:layout_width="337dp"
+            android:layout_height="348dp"
             android:background="@drawable/modal"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:padding="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/keyboard"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.537"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.521" />
-
-        <TextView
-            android:id="@+id/txt_renombrar_album"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Renombrar el álbum"
-            android:textSize="18dp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/modal_editar_a"
-            app:layout_constraintEnd_toEndOf="@+id/modal_editar_a"
-            app:layout_constraintHorizontal_bias="0.488"
-            app:layout_constraintStart_toStartOf="@+id/modal_editar_a"
-            app:layout_constraintTop_toTopOf="@+id/modal_editar_a"
-            app:layout_constraintVertical_bias="0.151" />
-
-        <EditText
-            android:id="@+id/label_edit_titulo_album"
-            android:layout_width="269dp"
-            android:layout_height="35dp"
-            android:text=" mi cumple 5"
-            android:textSize="15dp"
-            android:background="@color/azul_claro"
-            app:layout_constraintBottom_toBottomOf="@+id/modal_editar_a"
-            app:layout_constraintEnd_toEndOf="@+id/modal_editar_a"
-            app:layout_constraintHorizontal_bias="0.471"
-            app:layout_constraintStart_toStartOf="@+id/modal_editar_a"
-            app:layout_constraintTop_toTopOf="@+id/modal_editar_a"
-            app:layout_constraintVertical_bias="0.47" />
-
-
-        <Button
-            android:id="@+id/btn_cancelar_ea"
-            android:layout_width="110dp"
-            android:layout_height="45dp"
-            android:backgroundTint="@color/btn_secundario"
-            android:gravity="center"
-            android:text="Cancelar"
-            android:textColor="@color/txt_secundario"
-            app:layout_constraintBottom_toBottomOf="@+id/modal_editar_a"
-            app:layout_constraintEnd_toEndOf="@+id/modal_editar_a"
-            app:layout_constraintHorizontal_bias="0.165"
-            app:layout_constraintStart_toStartOf="@+id/modal_editar_a"
-            app:layout_constraintTop_toTopOf="@+id/modal_editar_a"
-            app:layout_constraintVertical_bias="0.87" />
-
-        <Button
-            android:id="@+id/btn_aceptar_ea"
-            android:layout_width="110dp"
-            android:layout_height="45dp"
-            android:backgroundTint="@color/btn_primario"
-            android:gravity="center"
-            android:text="Aceptar"
-            app:layout_constraintBottom_toBottomOf="@+id/modal_editar_a"
-            app:layout_constraintEnd_toEndOf="@+id/modal_editar_a"
-            app:layout_constraintHorizontal_bias="0.799"
-            app:layout_constraintStart_toStartOf="@+id/modal_editar_a"
-            app:layout_constraintTop_toTopOf="@+id/modal_editar_a"
-            app:layout_constraintVertical_bias="0.87" />
-
+            app:layout_constraintTop_toBottomOf="@+id/frame_nav" />
 
 
 
