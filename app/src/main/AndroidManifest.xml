@@ -13,7 +13,7 @@
         android:theme="@style/Theme.Remipics"
         tools:targetApi="31">
         <activity
-            android:name=".UserSettingsActivity"
+            android:name=".ChangePasswordActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
