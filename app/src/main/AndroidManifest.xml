@@ -13,6 +13,33 @@
         android:theme="@style/Theme.Remipics"
         tools:targetApi="31">
         <activity
+            android:name=".EditarAlbum"
+            android:exported="false" />
+        <activity
+            android:name=".SeleccionarAlbum"
+            android:exported="false" />
+        <activity
+            android:name=".EliminarMemoria"
+            android:exported="false" />
+        <activity
+            android:name=".SeleccionarMemoria"
+            android:exported="false" />
+        <activity
+            android:name=".EditarMemoria"
+            android:exported="false" />
+        <activity
+            android:name=".VerMemoria"
+            android:exported="false" />
+        <activity
+            android:name=".DashMemoriaCreada"
+            android:exported="false" />
+        <activity
+            android:name=".CrearMemoria2"
+            android:exported="false" />
+        <activity
+            android:name=".CrearMemoria1"
+            android:exported="false" />
+        <activity
             android:name=".DashMemoria"
             android:exported="false" />
         <activity

@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Remipics</string>
+    <string name="fecha_memoria">03-05-2010</string>
+    <string name="ubicacion_memoria"><![CDATA[creeps & waffles]]></string>
+    <string name="txt_descripcion">Descripción</string>
+    <string name="titulo_memoria">desayuno sorpresa</string>
 </resources>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditarMemoria">
+
+
+        <View
+            android:id="@+id/frame_nav"
+            android:layout_width="393dp"
+            android:layout_height="71dp"
+            android:background="@color/azul_claro"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/logo_img_2"
+            android:layout_width="232dp"
+            android:layout_height="53dp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.089"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.01"
+            app:srcCompat="@drawable/logo_img_2" />
+
+        <ImageView
+            android:id="@+id/icon_lupa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.759"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.035"
+            app:srcCompat="@drawable/icon_lupa" />
+
+        <ImageView
+            android:id="@+id/icon_cuenta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.909"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.035"
+            app:srcCompat="@drawable/icon_cuenta" />
+
+        <ImageView
+            android:id="@+id/img_memoria"
+            android:layout_width="393dp"
+            android:layout_height="273dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/frame_nav"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/imgalbum" />
+
+        <View
+            android:id="@+id/card_ver_m"
+            android:layout_width="393dp"
+            android:layout_height="488dp"
+            android:background="@drawable/card_ver_m"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/frame_nav"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/fecha_memoria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fecha_memoria"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/card_ver_m"
+            app:layout_constraintEnd_toEndOf="@+id/card_ver_m"
+            app:layout_constraintHorizontal_bias="0.814"
+            app:layout_constraintStart_toStartOf="@+id/card_ver_m"
+            app:layout_constraintTop_toTopOf="@+id/card_ver_m"
+            app:layout_constraintVertical_bias="0.2" />
+
+        <TextView
+            android:id="@+id/txt_descripcion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_descripcion"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/card_ver_m"
+            app:layout_constraintEnd_toEndOf="@+id/card_ver_m"
+            app:layout_constraintHorizontal_bias="0.165"
+            app:layout_constraintStart_toStartOf="@+id/card_ver_m"
+            app:layout_constraintTop_toTopOf="@+id/card_ver_m"
+            app:layout_constraintVertical_bias="0.324" />
+
+        <TextView
+            android:id="@+id/descripcion_memoria"
+            android:layout_width="306dp"
+            android:layout_height="223dp"
+            android:background="@drawable/label"
+            android:text=""
+            app:layout_constraintBottom_toBottomOf="@+id/card_ver_m"
+            app:layout_constraintEnd_toEndOf="@+id/card_ver_m"
+            app:layout_constraintHorizontal_bias="0.558"
+            app:layout_constraintStart_toStartOf="@+id/card_ver_m"
+            app:layout_constraintTop_toTopOf="@+id/card_ver_m"
+            app:layout_constraintVertical_bias="0.726" />
+
+        <TextView
+            android:id="@+id/ubi_memoria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ubicacion_memoria"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/card_ver_m"
+            app:layout_constraintEnd_toEndOf="@+id/card_ver_m"
+            app:layout_constraintHorizontal_bias="0.285"
+            app:layout_constraintStart_toStartOf="@+id/card_ver_m"
+            app:layout_constraintTop_toTopOf="@+id/card_ver_m"
+            app:layout_constraintVertical_bias="0.2" />
+
+        <TextView
+            android:id="@+id/titulo_memoria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/titulo_memoria"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="@+id/card_ver_m"
+            app:layout_constraintEnd_toEndOf="@+id/card_ver_m"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="@+id/card_ver_m"
+            app:layout_constraintTop_toTopOf="@+id/card_ver_m"
+            app:layout_constraintVertical_bias="0.053" />
+
+        <ImageView
+            android:id="@+id/icon_ubi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            app:layout_constraintBottom_toBottomOf="@+id/card_ver_m"
+            app:layout_constraintEnd_toEndOf="@+id/card_ver_m"
+            app:layout_constraintHorizontal_bias="0.14"
+            app:layout_constraintStart_toStartOf="@+id/card_ver_m"
+            app:layout_constraintTop_toTopOf="@+id/card_ver_m"
+            app:layout_constraintVertical_bias="0.198"
+            app:srcCompat="@drawable/icon_ubi" />
+
+        <ImageView
+            android:id="@+id/icon_fecha_m"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/card_ver_m"
+            app:layout_constraintHorizontal_bias="0.601"
+            app:layout_constraintStart_toStartOf="@+id/card_ver_m"
+            app:layout_constraintTop_toTopOf="@+id/card_ver_m"
+            app:layout_constraintVertical_bias="0.198"
+            app:srcCompat="@drawable/icon_fecha_m" />
+
+        <Button
+            android:id="@+id/btn_aceptar_em"
+            android:layout_width="110dp"
+            android:layout_height="45dp"
+            android:backgroundTint="@color/btn_primario"
+            android:gravity="center"
+            android:text="Aceptar"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/card_ver_m"
+            app:layout_constraintEnd_toEndOf="@+id/card_ver_m"
+            app:layout_constraintHorizontal_bias="0.784"
+            app:layout_constraintStart_toStartOf="@+id/card_ver_m"
+            app:layout_constraintTop_toTopOf="@+id/card_ver_m"
+            app:layout_constraintVertical_bias="0.963" />
+
+        <Button
+            android:id="@+id/btn_cancel_em"
+            android:layout_width="110dp"
+            android:layout_height="45dp"
+            android:backgroundTint="@color/btn_secundario"
+            android:gravity="center"
+            android:text="Cancelar"
+            android:textColor="@color/txt_secundario"
+            app:layout_constraintBottom_toBottomOf="@+id/card_ver_m"
+            app:layout_constraintEnd_toEndOf="@+id/card_ver_m"
+            app:layout_constraintHorizontal_bias="0.233"
+            app:layout_constraintStart_toStartOf="@+id/card_ver_m"
+            app:layout_constraintTop_toTopOf="@+id/card_ver_m"
+            app:layout_constraintVertical_bias="0.963" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

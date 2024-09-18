@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditarAlbum">
+
+        <View
+            android:id="@+id/frame_nav"
+            android:layout_width="392dp"
+            android:layout_height="71dp"
+            android:background="@color/azul_claro"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/logo_img_2"
+            android:layout_width="232dp"
+            android:layout_height="53dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.089"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.01"
+            app:srcCompat="@drawable/logo_img_2" />
+
+        <ImageView
+            android:id="@+id/icon_filtro_f"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.759"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.035"
+            app:srcCompat="@drawable/icon_filtro_f" />
+
+        <ImageView
+            android:id="@+id/icon_cuenta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.909"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.035"
+            app:srcCompat="@drawable/icon_cuenta" />
+
+        <TextView
+            android:id="@+id/titulo_album"
+            android:layout_width="183dp"
+            android:layout_height="39dp"
+            android:text="Mis álbumes"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.14"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.132" />
+
+
+        <View
+            android:id="@+id/frame_albumes"
+            android:layout_width="342dp"
+            android:layout_height="192dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.489"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.279" />
+
+        <View
+            android:id="@+id/frame_album"
+            android:layout_width="143dp"
+            android:layout_height="190dp"
+
+            app:layout_constraintBottom_toBottomOf="@+id/frame_albumes"
+            app:layout_constraintEnd_toEndOf="@+id/frame_albumes"
+            app:layout_constraintHorizontal_bias="0.156"
+            app:layout_constraintStart_toStartOf="@+id/frame_albumes"
+            app:layout_constraintTop_toTopOf="@+id/frame_albumes"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/img_portada_album"
+            android:layout_width="143dp"
+            android:layout_height="127dp"
+            android:background="@drawable/img_border_a"
+            android:clipToOutline="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/imgalbum"
+            app:layout_constraintBottom_toBottomOf="@+id/frame_album"
+            app:layout_constraintEnd_toEndOf="@+id/frame_album"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/frame_album"
+            app:layout_constraintTop_toTopOf="@+id/frame_album"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/nom_album"
+            android:layout_width="101dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="24dp"
+            android:text="mi 5 cumple"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/frame_album"
+            app:layout_constraintEnd_toEndOf="@+id/frame_album"
+            app:layout_constraintHorizontal_bias="0.19"
+            app:layout_constraintStart_toStartOf="@+id/frame_album"
+            app:layout_constraintTop_toTopOf="@+id/frame_album"
+            app:layout_constraintVertical_bias="0.784" />
+
+        <TextView
+            android:id="@+id/cant_memoria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="1"
+            android:textSize="13dp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="@+id/frame_album"
+            app:layout_constraintEnd_toEndOf="@+id/frame_album"
+            app:layout_constraintHorizontal_bias="0.064"
+            app:layout_constraintStart_toStartOf="@+id/frame_album"
+            app:layout_constraintTop_toTopOf="@+id/frame_album"
+            app:layout_constraintVertical_bias="0.909" />
+
+        <ImageView
+            android:id="@+id/icon_selec_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/frame_album"
+            app:layout_constraintEnd_toEndOf="@+id/frame_album"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/frame_album"
+            app:layout_constraintTop_toTopOf="@+id/frame_album"
+            app:layout_constraintVertical_bias="0.881"
+            app:srcCompat="@drawable/icon_check_selec" />
+
+        <View
+            android:id="@+id/cont_selec_a"
+            android:layout_width="393dp"
+            android:layout_height="72dp"
+            android:background="@color/gris_clarito"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.096" />
+
+        <TextView
+            android:id="@+id/txt_select_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1 Elemento Seleccionado"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/cont_selec_a"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/cont_selec_a"
+            app:layout_constraintTop_toBottomOf="@+id/frame_nav" />
+
+        <ImageView
+            android:id="@+id/icon_cerrar_selec"
+            android:layout_width="46dp"
+            android:layout_height="33dp"
+            android:layout_marginStart="28dp"
+            app:layout_constraintBottom_toBottomOf="@+id/cont_selec_a"
+            app:layout_constraintEnd_toStartOf="@+id/txt_select_a"
+            app:layout_constraintStart_toStartOf="@+id/cont_selec_a"
+            app:layout_constraintTop_toBottomOf="@+id/frame_nav"
+            app:layout_constraintVertical_bias="0.468"
+            app:srcCompat="@drawable/icon_cerrar_selec" />
+
+
+        <View
+            android:id="@+id/tapar"
+            android:layout_width="393dp"
+            android:layout_height="743dp"
+            android:background="@color/tapar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="0.99"
+            app:layout_constraintVertical_bias="0.147" />
+
+        <View
+            android:id="@+id/keyboard"
+            android:layout_width="394dp"
+            android:layout_height="263dp"
+            android:background="#EB737373"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+
+        <View
+            android:id="@+id/modal_editar_a"
+            android:layout_width="339dp"
+            android:layout_height="169dp"
+            android:background="@drawable/modal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.537"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.521" />
+
+        <TextView
+            android:id="@+id/txt_crear_memoria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Crear un álbum"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/modal_editar_a"
+            app:layout_constraintEnd_toEndOf="@+id/modal_editar_a"
+            app:layout_constraintHorizontal_bias="0.488"
+            app:layout_constraintStart_toStartOf="@+id/modal_editar_a"
+            app:layout_constraintTop_toTopOf="@+id/modal_editar_a"
+            app:layout_constraintVertical_bias="0.151" />
+
+        <EditText
+            android:id="@+id/label_nom_album"
+            android:layout_width="269dp"
+            android:layout_height="35dp"
+            android:text="Nombre"
+            android:textSize="15dp"
+            app:layout_constraintBottom_toBottomOf="@+id/modal_editar_a"
+            app:layout_constraintEnd_toEndOf="@+id/modal_editar_a"
+            app:layout_constraintHorizontal_bias="0.471"
+            app:layout_constraintStart_toStartOf="@+id/modal_editar_a"
+            app:layout_constraintTop_toTopOf="@+id/modal_editar_a"
+            app:layout_constraintVertical_bias="0.47" />
+
+
+        <Button
+            android:id="@+id/btn_cancelar_ca"
+            android:layout_width="110dp"
+            android:layout_height="45dp"
+            android:backgroundTint="@color/btn_secundario"
+            android:gravity="center"
+            android:text="Cancelar"
+            android:textColor="@color/txt_secundario"
+            app:layout_constraintBottom_toBottomOf="@+id/modal_editar_a"
+            app:layout_constraintEnd_toEndOf="@+id/modal_editar_a"
+            app:layout_constraintHorizontal_bias="0.165"
+            app:layout_constraintStart_toStartOf="@+id/modal_editar_a"
+            app:layout_constraintTop_toTopOf="@+id/modal_editar_a"
+            app:layout_constraintVertical_bias="0.87" />
+
+        <Button
+            android:id="@+id/btn_aceptar_ca"
+            android:layout_width="110dp"
+            android:layout_height="45dp"
+            android:backgroundTint="@color/btn_primario"
+            android:gravity="center"
+            android:text="Aceptar"
+            app:layout_constraintBottom_toBottomOf="@+id/modal_editar_a"
+            app:layout_constraintEnd_toEndOf="@+id/modal_editar_a"
+            app:layout_constraintHorizontal_bias="0.799"
+            app:layout_constraintStart_toStartOf="@+id/modal_editar_a"
+            app:layout_constraintTop_toTopOf="@+id/modal_editar_a"
+            app:layout_constraintVertical_bias="0.87" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
