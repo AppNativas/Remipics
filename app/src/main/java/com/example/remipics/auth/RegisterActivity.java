@@ -6,6 +6,7 @@ import android.widget.ViewSwitcher;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatTextView;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -35,12 +36,18 @@ public class RegisterActivity extends AppCompatActivity {
         MaterialButton nextButton = findViewById(R.id.next_button);
         nextButton.setOnClickListener(v -> viewSwitcher.showNext());
 
-        MaterialButton registerButton = findViewById(R.id.register_button);
+        MaterialButton registerButton = findViewById(R.id.register_send_button);
         registerButton.setOnClickListener(v -> {
             // Handle registration logic here
         });
 
         birthDateEditText.setOnClickListener(v -> showDatePickerDialog());
+
+        //#region button return
+        AppCompatTextView backText = findViewById(R.id.back_text);
+        backText.setOnClickListener(v -> onBackPressed());
+        //endregion
+
     }
 
     private void showDatePickerDialog() {
