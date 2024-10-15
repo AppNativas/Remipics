@@ -1,5 +1,6 @@
 package com.example.remipics.auth;
 
+import android.content.Intent;
 import android.graphics.ColorMatrix;
 import android.graphics.ColorMatrixColorFilter;
 import android.os.Bundle;
@@ -75,6 +76,15 @@ public class HomeActivity extends AppCompatActivity {
             });
             // #endregion
 
+            //#region Buttons redirection
+
+            // Redirect to the LoginActivity
+            findViewById(R.id.login_button).setOnClickListener(this::onRedirectionLogin);
+
+            // Redirect to the RegisterActivity
+            findViewById(R.id.register_button).setOnClickListener(this::onRedirectionRegister);
+
+            //endregion
 
             //Init
             EdgeToEdge.enable(this);
@@ -83,8 +93,20 @@ public class HomeActivity extends AppCompatActivity {
                 v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
                 return insets;
             });
+
         } catch (Exception e) {
             Log.e(TAG, "onCreate: ", e);
         }
     }
+
+    protected void onRedirectionLogin(View view) {
+        // Redirect to the LoginActivity
+        startActivity(new Intent(this, LoginActivity.class));
+    }
+
+    protected void onRedirectionRegister(View view) {
+        // Redirect to the RegisterActivity
+        startActivity(new Intent(this, RegisterActivity.class));
+    }
+
 }
