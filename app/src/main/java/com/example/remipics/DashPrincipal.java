@@ -25,7 +25,7 @@ public class DashPrincipal extends AppCompatActivity {
 
         btnCreateMemory.setOnClickListener(v -> {
             // Redirect to the create memory activity
-            startActivity(new Intent(this, CrearAlbum.class));
+            startActivity(new Intent(this, CrearMemoria2.class));
         });
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
