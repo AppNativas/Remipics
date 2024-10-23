@@ -23,11 +23,10 @@
         app:layout_constraintVertical_bias="0.5">
 
         <!-- First Form Layout -->
-
-        <!-- Second Form Layout -->
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="380dp"
+            android:layout_width="match_parent"
             android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
             android:layout_height="wrap_content">
 
             <com.google.android.material.textfield.TextInputLayout
@@ -110,8 +109,11 @@
                 app:layout_constraintTop_toBottomOf="@+id/birthDateLayout" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
+        <!-- Second Form Layout -->
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
             android:layout_height="wrap_content">
 
             <com.google.android.material.textfield.TextInputLayout
@@ -181,4 +183,36 @@
                 app:layout_constraintEnd_toEndOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ViewSwitcher>
+
+    <!-- Sign Up Google   -->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/alternativeregister_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="TAMBIEN PUEDES USAR..."
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewSwitcher"
+        app:layout_constraintVertical_bias="0.482" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="298dp"
+        android:layout_height="43dp"
+        android:background="@null"
+        android:scaleType="fitXY"
+        android:src="@drawable/signingoogle"
+        android:padding="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/alternativeregister_text"
+        app:layout_constraintVertical_bias="0.32"
+        tools:ignore="MissingConstraints" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
