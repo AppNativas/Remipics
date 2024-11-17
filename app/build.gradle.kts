@@ -43,6 +43,14 @@ dependencies {
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
 
+    implementation ("com.google.android.libraries.places:places:2.7.0") //api para busqueda de lugares
+
+    // FusedLocationProviderClient para obtener la ubicación actual
+    implementation ("com.google.android.gms:play-services-location:18.0.0")
+
+    // Google Maps SDK
+    implementation ("com.google.android.gms:play-services-maps:17.0.0")
+
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("com.squareup.okhttp3:okhttp:4.9.0")

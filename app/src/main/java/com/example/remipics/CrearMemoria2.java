@@ -4,6 +4,7 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.location.Location;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -13,13 +14,35 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
+import android.widget.TextView;
 import android.widget.Toast;
+
+//ubicacion
+
+import android.Manifest;
+import android.content.pm.PackageManager;
+import android.location.Location;
+import android.os.Bundle;
+import android.widget.Toast;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.tasks.OnSuccessListener;
+
+//
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class CrearMemoria2 extends AppCompatActivity {
 
@@ -28,6 +51,9 @@ public class CrearMemoria2 extends AppCompatActivity {
 
     private static final int CAMERA_REQUEST_CODE = 101;
     private static final int GALLERY_REQUEST_CODE = 102;
+
+    private TextView locationTextView;
+    private static final int LOCATION_PICKER_REQUEST_CODE = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +65,23 @@ public class CrearMemoria2 extends AppCompatActivity {
 
         // Configurar el evento de clic en el ImageView para mostrar el modal
         imageView.setOnClickListener(v -> showModal());
+
+        //vincular el metodo de ubicacion modal
+        setContentView(R.layout.activity_crear_memoria2);
+        // Inicializa la API de Google Places
+
+
+        locationTextView = findViewById(R.id.enlace_ubi_m);
+
     }
+
+
+
+
+
+
+
+
 
     // Mostrar el modal para elegir entre cámara y galería
     private void showModal() {
@@ -149,4 +191,33 @@ public class CrearMemoria2 extends AppCompatActivity {
     private void showPermissionDeniedMessage(String feature) {
         Toast.makeText(this, "Permiso denegado para " + feature, Toast.LENGTH_SHORT).show();
     }
+
+
+
+    /////////////////////////////////////////////////////////////////////////////////
+    //////////////////////// UBICACION //////////////////////////////////////////////
+
+
+    // Método para abrir el mapa y permitir que el usuario seleccione la ubicación
+    public void openLocationPicker(View view) {
+        Intent intent = new Intent(CrearMemoria2.this, LocationPickerActivity.class);
+        startActivityForResult(intent, LOCATION_PICKER_REQUEST_CODE);
+    }
+
+    // Recibir la ubicación seleccionada desde LocationPickerActivity
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == LOCATION_PICKER_REQUEST_CODE && resultCode == RESULT_OK) {
+            // Obtener la ubicación seleccionada desde el intent
+            double lat = data.getDoubleExtra("LATITUDE", 0);
+            double lon = data.getDoubleExtra("LONGITUDE", 0);
+
+            // Actualizar el TextView con la ubicación seleccionada
+            locationTextView.setText("Ubicación seleccionada: " + lat + ", " + lon);
+        }
+    }
+
+
+
 }
