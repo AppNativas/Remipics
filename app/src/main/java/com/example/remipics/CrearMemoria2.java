@@ -4,8 +4,10 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
-import android.location.Location;
+import android.location.Address;
+import android.location.Geocoder;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.LayoutInflater;
@@ -17,34 +19,32 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
 
-//ubicacion
-
-import android.Manifest;
-import android.content.pm.PackageManager;
-import android.location.Location;
-import android.os.Bundle;
-import android.widget.Toast;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import com.google.android.gms.location.FusedLocationProviderClient;
-import com.google.android.gms.location.LocationServices;
-import com.google.android.gms.tasks.OnSuccessListener;
-
-//
-
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationCallback;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationResult;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.MarkerOptions;
 
-public class CrearMemoria2 extends AppCompatActivity {
+import java.io.IOException;
+import java.util.List;
+import java.util.Locale;
+
+public class CrearMemoria2 extends AppCompatActivity  {
 
     private ImageView imageView;
     private PopupWindow popupWindow;
@@ -52,30 +52,44 @@ public class CrearMemoria2 extends AppCompatActivity {
     private static final int CAMERA_REQUEST_CODE = 101;
     private static final int GALLERY_REQUEST_CODE = 102;
 
+    // Geolocalización
     private TextView locationTextView;
-    private static final int LOCATION_PICKER_REQUEST_CODE = 1;
+    private GoogleMap mMap;
+    private FusedLocationProviderClient fusedLocationProviderClient;
+    private LocationCallback locationCallback;
+    private static final int CODIGO_PERMISO_UBICACION = 100;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crear_memoria2);
 
-        // Inicializar el ImageView
+        // Inicializar componentes de cámara
         imageView = findViewById(R.id.icon_img_m);
-
-        // Configurar el evento de clic en el ImageView para mostrar el modal
         imageView.setOnClickListener(v -> showModal());
 
-        //vincular el metodo de ubicacion modal
-        setContentView(R.layout.activity_crear_memoria2);
-        // Inicializa la API de Google Places
 
+        // Inicializar el TextView
+        TextView locationTextView = findViewById(R.id.enlace_ubi_m);
 
-        locationTextView = findViewById(R.id.enlace_ubi_m);
+        // Abrir LocationPickerActivity al hacer clic
+        locationTextView.setOnClickListener(v -> {
+            Intent intent = new Intent(CrearMemoria2.this, LocationPickerActivity.class);
+            startActivityForResult(intent, 200); // Código de solicitud para la actividad
+        });
 
     }
 
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 200 && resultCode == RESULT_OK && data != null) {
+            String direccion = data.getStringExtra("direccion");
+            TextView locationTextView = findViewById(R.id.enlace_ubi_m);
+            locationTextView.setText(direccion); // Mostrar la dirección seleccionada
+        }
+    }
 
 
 
@@ -191,33 +205,6 @@ public class CrearMemoria2 extends AppCompatActivity {
     private void showPermissionDeniedMessage(String feature) {
         Toast.makeText(this, "Permiso denegado para " + feature, Toast.LENGTH_SHORT).show();
     }
-
-
-
-    /////////////////////////////////////////////////////////////////////////////////
-    //////////////////////// UBICACION //////////////////////////////////////////////
-
-
-    // Método para abrir el mapa y permitir que el usuario seleccione la ubicación
-    public void openLocationPicker(View view) {
-        Intent intent = new Intent(CrearMemoria2.this, LocationPickerActivity.class);
-        startActivityForResult(intent, LOCATION_PICKER_REQUEST_CODE);
-    }
-
-    // Recibir la ubicación seleccionada desde LocationPickerActivity
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == LOCATION_PICKER_REQUEST_CODE && resultCode == RESULT_OK) {
-            // Obtener la ubicación seleccionada desde el intent
-            double lat = data.getDoubleExtra("LATITUDE", 0);
-            double lon = data.getDoubleExtra("LONGITUDE", 0);
-
-            // Actualizar el TextView con la ubicación seleccionada
-            locationTextView.setText("Ubicación seleccionada: " + lat + ", " + lon);
-        }
-    }
-
 
 
 }

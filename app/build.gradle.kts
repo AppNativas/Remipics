@@ -45,11 +45,9 @@ dependencies {
 
     implementation ("com.google.android.libraries.places:places:2.7.0") //api para busqueda de lugares
 
-    // FusedLocationProviderClient para obtener la ubicación actual
-    implementation ("com.google.android.gms:play-services-location:18.0.0")
+    implementation ("com.google.android.gms:play-services-maps:18.1.0")
+    implementation ("com.google.android.gms:play-services-location:21.0.1")
 
-    // Google Maps SDK
-    implementation ("com.google.android.gms:play-services-maps:17.0.0")
 
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
