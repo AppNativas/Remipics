@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
@@ -24,6 +25,9 @@ import androidx.appcompat.widget.AppCompatTextView;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import okhttp3.OkHttpClient;
+import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -31,9 +35,9 @@ import retrofit2.Response;
 import com.example.remipics.DashPrincipal;
 import com.example.remipics.R;
 import com.example.remipics.controllers.ApiClient;
+import com.example.remipics.entities.ApiResponse;
 import com.example.remipics.entities.LoginRequest;
-import com.example.remipics.entities.LoginResponse;
-import com.example.remipics.interfaces.ApiService;
+import com.example.remipics.interfaces.ApiUserService;
 import com.google.android.gms.auth.api.identity.BeginSignInRequest;
 import com.google.android.gms.auth.api.identity.BeginSignInResult;
 import com.google.android.gms.auth.api.identity.Identity;
@@ -46,7 +50,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private ApiService apiService;
+    private ApiUserService apiUserService;
     private static final String TAG = "InicioDeSesion";
     private SignInClient oneTapClient;
     private BeginSignInRequest signInRequest;
@@ -71,9 +75,54 @@ public class LoginActivity extends AppCompatActivity {
 
         findViewById(R.id.rememberpass_text).setOnClickListener(v -> onRedirectionRemember());
 
-        findViewById(R.id.login_send_button).setOnClickListener(v -> onRedirectionUserDashboard());
 
-//        apiService = ApiClient.getClient("http://localhost:3000/").create(ApiService.class);
+        Button btnLogin = findViewById(R.id.login_send_button);
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            EditText usernameEditText = findViewById(R.id.username);
+            EditText passwordEditText = findViewById(R.id.password);
+            @Override
+            public void onClick(View v) {
+                    String username = usernameEditText.getText().toString().trim();
+                    String password = passwordEditText.getText().toString().trim();
+
+                    // Add your logic to check if the user is logged in
+                    //return !username.isEmpty() && !password.isEmpty();
+
+                    LoginRequest loginRequest = new LoginRequest(username, password);
+                    apiUserService = ApiClient.getClient().create(ApiUserService.class);
+                    Call<ApiResponse> call = apiUserService.login(loginRequest);
+
+                    call.enqueue(new Callback<ApiResponse>() {
+                        @Override
+                        public void onResponse(Call<ApiResponse> call, Response<ApiResponse> response) {
+                            if (response.isSuccessful() && response.body() != null) {
+                                ApiResponse loginResponse = response.body();
+                                //Log.d("LoginActivity", "Response: " + loginResponse.toString());
+                                if (loginResponse.isSuccess()) {
+                                    usernameEditText.getText().clear();
+                                    passwordEditText.getText().clear();
+                                    String tokenInter = response.body().getData().toString();
+
+                                    Intent intent = new Intent(LoginActivity.this, DashPrincipal.class);
+                                    intent.putExtra("token", tokenInter);
+
+                                    Toast.makeText(LoginActivity.this, "Login successful", Toast.LENGTH_SHORT).show();
+                                    startActivity(intent);
+                                } else {
+                                    showDialog("1. User not found");
+                                    Toast.makeText(LoginActivity.this, loginResponse.getMessage(), Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        }
+
+                        @Override
+                        public void onFailure(Call<ApiResponse> call, Throwable t) {
+                            showDialog("2. User not found");
+                            Toast.makeText(LoginActivity.this, "Login failed", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+            }
+        });
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -90,56 +139,6 @@ public class LoginActivity extends AppCompatActivity {
     protected void onRedirectionRemember() {
         // Redirect to the remember password activity
         startActivity(new Intent(this, RememberActivity.class));
-    }
-
-    protected void onRedirectionUserDashboard() {
-        // Redirect to the user dashboard activity
-
-        if(isUserLoggedIn()) {
-            startActivity(new Intent(this, DashPrincipal.class));
-        }else{
-            showDialog("User not found");
-        }
-
-    }
-
-    protected boolean isUserLoggedIn() {
-        EditText usernameEditText = findViewById(R.id.username);
-        EditText passwordEditText = findViewById(R.id.password);
-
-        String username = usernameEditText.getText().toString();
-        String password = passwordEditText.getText().toString();
-
-        // Add your logic to check if the user is logged in
-        return !username.isEmpty() && !password.isEmpty();
-
-      /*  LoginRequest loginRequest = new LoginRequest(username, password);
-        Call<LoginResponse> call = apiService.login(loginRequest);*/
-
-       /* call.enqueue(new Callback<LoginResponse>() {
-            @Override
-            public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
-                if (response.isSuccessful() && response.body() != null) {
-                    LoginResponse loginResponse = response.body();
-                    if (loginResponse.isSuccess()) {
-                        // Handle successful login
-                        Toast.makeText(LoginActivity.this, "Login successful", Toast.LENGTH_SHORT).show();
-                    } else {
-                        // Handle login error
-                        Toast.makeText(LoginActivity.this, loginResponse.getMessage(), Toast.LENGTH_SHORT).show();
-                    }
-                }
-            }
-
-            @Override
-            public void onFailure(Call<LoginResponse> call, Throwable t) {
-                // Handle failure
-                Toast.makeText(LoginActivity.this, "Login failed", Toast.LENGTH_SHORT).show();
-            }
-        });
-        return false; // Adjust this return value based on your login logic
-
-        */
     }
 
     private void showDialog(String message) {
