@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="botones">#D0ECEA</color>
+
+    <color name="gris">#C3BFC7</color>
+    <color name="azul">#00AAFF</color>
+    <color name="azul_oscuro">#037DBA</color>
+    <color name="azul_claro">#D0ECEA</color>
+    <color name="btn_secundario">#E3E3E3</color>
+    <color name="txt_secundario">#79747E</color>
+    <color name="btn_primario">#00AAFF</color>
+    <color name="secundario">#706A75</color>
+    <color name="gris_clarito">#F0EEEE</color>
+
+    <color name="tapar">#BAC8C8C8</color>
+</resources>

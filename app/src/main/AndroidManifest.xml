@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32"
+        tools:ignore="ScopedStorage" />
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
+    <application
+        android:name=".Ubicacion"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Remipics">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCPoBJ4aiKiMZbsoFM_mTo5vrVGBl-Dlw4" />
+
+
+
+        <activity
+            android:name=".LocationPickerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FiltroAlbum"
+            android:exported="false" />
+        <activity
+            android:name=".EliminarAlbum"
+            android:exported="false" />
+        <activity
+            android:name=".EditarAlbum"
+            android:exported="false" />
+        <activity
+            android:name=".SeleccionarAlbum"
+            android:exported="false" />
+        <activity
+            android:name=".EliminarMemoria"
+            android:exported="false" />
+        <activity
+            android:name=".SeleccionarMemoria"
+            android:exported="false" />
+        <activity
+            android:name=".EditarMemoria"
+            android:exported="false" />
+        <activity
+            android:name=".VerMemoria"
+            android:exported="false" />
+        <activity
+            android:name=".DashMemoriaCreada"
+            android:exported="false" />
+        <activity
+            android:name=".CrearMemoria2"
+            android:exported="false" />
+        <activity
+            android:name=".CrearMemoria1"
+            android:exported="false" />
+        <activity
+            android:name=".DashMemoria"
+            android:exported="false" />
+        <activity
+            android:name=".DashConAlbum"
+            android:exported="false" />
+        <activity
+            android:name=".CrearAlbum"
+            android:exported="false" />
+        <activity
+            android:name=".PermisoUbi"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PermisoImg"
+            android:exported="false" />
+        <activity
+            android:name=".ChangeEmailActivity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".auth.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".auth.RememberActivity"
+            android:exported="false" />
+        <activity
+            android:name=".auth.HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".auth.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".DashPrincipal"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

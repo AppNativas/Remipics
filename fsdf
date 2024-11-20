@@ -1,0 +1,164 @@
+[33mcommit 07378b990333baa57ad6bd5333f8d3f585a5d835[m[33m ([m[1;36mHEAD -> [m[1;32mpantallasConfiguracion[m[33m, [m[1;31morigin/main[m[33m)[m
+Merge: 05c0892 6d62602
+Author: Manuel Garcia <garciahildo@gmail.com>
+Date:   Mon Oct 14 21:25:59 2024 -0500
+
+    Merge pull request #3 from AppNativas/dvlp
+    
+    feat: login con navbar y redireccion de botones
+
+[33mcommit 6d62602e4b669f6f99c650e72f028a68d846d3f0[m
+Author: Manuel <mgarc7g@gmail.com>
+Date:   Mon Oct 14 21:23:20 2024 -0500
+
+    feat: login con navbar y redireccion de botones
+
+[33mcommit 05c0892aae4dd2c278e56f5c4a5c9b60ddb1341c[m
+Author: Manuel <mgarc7g@gmail.com>
+Date:   Sun Oct 13 10:49:12 2024 -0500
+
+    fix: start app with all layaouts merged
+
+[33mcommit 2be8f9120aa60ce5fe743acc940fed8e8cf5bf2b[m
+Merge: 2623676 50aa1b8
+Author: Manuel <mgarc7g@gmail.com>
+Date:   Sat Oct 12 13:58:23 2024 -0500
+
+    merge: main-sol
+
+[33mcommit 50aa1b808e5ade881029cf89d23d7a0ce8c389cd[m
+Author: Manuel <mgarc7g@gmail.com>
+Date:   Sat Oct 12 12:28:51 2024 -0500
+
+    fix: init spalsh loading
+
+[33mcommit 9817c8cf1d3d13a2137acb83bd8eceed9a792278[m
+Merge: 87c81c7 18191bf
+Author: Manuel <mgarc7g@gmail.com>
+Date:   Sat Oct 12 12:26:44 2024 -0500
+
+    merge: main-pantallasConfig
+
+[33mcommit 87c81c739b3ca6b3d472457ba3fa50e3fa4caaed[m
+Author: Manuel <mgarc7g@gmail.com>
+Date:   Sat Oct 12 12:07:43 2024 -0500
+
+    merge - feat-paginas-accesos
+
+[33mcommit bcc4c97f5472211b155bd3193ce01dbb23cad657[m
+Merge: 73ace3f db67e0d
+Author: Manuel Garcia <garciahildo@gmail.com>
+Date:   Wed Sep 18 18:19:59 2024 -0500
+
+    Merge pull request #1 from AppNativas/feat-paginas-accesos
+    
+    Feat paginas accesos
+
+[33mcommit 18191bf765f4e32518b6aacc3dbdd3a76b67ded6[m[33m ([m[1;31morigin/pantallasConfiguracion[m[33m)[m
+Author: Jsramirez1101 <jsantiagoramirez@ucompensar.edu.co>
+Date:   Wed Sep 18 17:30:47 2024 -0500
+
+    feat: email setting
+
+[33mcommit a8e49cc4970ab82ea8caacf1e525b4ace2a87cfd[m
+Author: Jsramirez1101 <jsantiagoramirez@ucompensar.edu.co>
+Date:   Wed Sep 18 17:18:08 2024 -0500
+
+    feat: password setting
+
+[33mcommit 2623676eedf14705824c03cc57420970e3f01975[m
+Author: vampwtry <bsquintana@ucompensar.edu.co>
+Date:   Wed Sep 18 16:35:45 2024 -0500
+
+    P.1 Filtros
+
+[33mcommit 370f9d9b44b6044e6f6bfbb9fa177a6dbbae98f9[m
+Author: vampwtry <bsquintana@ucompensar.edu.co>
+Date:   Wed Sep 18 16:07:13 2024 -0500
+
+    Crear, Editar, Eliminar Album
+
+[33mcommit dedf0a913ecebd1f6246c0f1c41a793cb9b24380[m
+Author: vampwtry <bsquintana@ucompensar.edu.co>
+Date:   Wed Sep 18 15:57:13 2024 -0500
+
+    Crear, Ver, Editar, Eliminar Memoria - P.2 Album
+
+[33mcommit 44a0481c7dcaa125fe36279c0837457214836720[m
+Author: Jsramirez1101 <jsantiagoramirez@ucompensar.edu.co>
+Date:   Wed Sep 18 01:46:14 2024 -0500
+
+    feat: home setting
+
+[33mcommit db67e0d99aeefa524e9ebb4b4c72d6f2dd3774c5[m
+Author: Manuel <garciahildo@gmail.com>
+Date:   Wed Sep 18 00:34:53 2024 -0500
+
+    feat: register page
+
+[33mcommit 35ea995b5beea0bd1cef914eb83efd8ecf6dbe44[m
+Author: Manuel <garciahildo@gmail.com>
+Date:   Wed Sep 18 00:26:41 2024 -0500
+
+    feat: remember page
+
+[33mcommit 0db9a181b96517c2b0faf08cc2cd81b1f40d0e46[m
+Merge: cca1da5 be750c8
+Author: Manuel <garciahildo@gmail.com>
+Date:   Tue Sep 17 23:57:34 2024 -0500
+
+    merge
+
+[33mcommit cca1da5d44f6f4ce917bee07b6b17a09b5cf88e2[m
+Author: Manuel <garciahildo@gmail.com>
+Date:   Tue Sep 17 23:52:31 2024 -0500
+
+    feat: home page & login page
+
+[33mcommit be750c8bb92090091b2291d1a75050cca4add870[m
+Author: Manuel <garciahildo@gmail.com>
+Date:   Tue Sep 17 23:52:31 2024 -0500
+
+    feat: home page & login page
+
+[33mcommit 532a363dae4b774fe58807f9af4624f93cda9e69[m
+Author: Manuel <garciahildo@gmail.com>
+Date:   Tue Sep 17 20:32:39 2024 -0500
+
+    feat: creacion de splash activity
+
+[33mcommit af26bee494d921a81f85b6be1461c5428a78f6b6[m
+Author: Manuel <garciahildo@gmail.com>
+Date:   Mon Sep 16 22:03:22 2024 -0500
+
+    fix: etiqueta no valida en logo.xml
+
+[33mcommit 1ba1455e5fd2fcd3058f577012cd2fe2fb9f7101[m
+Author: Manuel <garciahildo@gmail.com>
+Date:   Mon Sep 16 21:40:08 2024 -0500
+
+    feat: logo de la app
+
+[33mcommit 84e97d4701f2d28eec354af3caa3fe6d97c31200[m
+Author: vampwtry <bsquintana@ucompensar.edu.co>
+Date:   Mon Sep 16 16:31:24 2024 -0500
+
+    Crear album, dash album creado y dash memoria
+
+[33mcommit 697b7208a1072fbd4528852b877125558ef89513[m
+Author: vampwtry <bsquintana@ucompensar.edu.co>
+Date:   Mon Sep 16 13:42:05 2024 -0500
+
+    permisos de ubicacion e imagenes
+
+[33mcommit 5c19791664b02a52d1fde484a1087c0a208e7e27[m
+Author: vampwtry <bsquintana@ucompensar.edu.co>
+Date:   Mon Sep 16 10:54:30 2024 -0500
+
+    Dashboard principal
+
+[33mcommit 73ace3fa25a3ad8e86f10d77a9ec229bc4d9f3e4[m
+Author: Manuel <garciahildo@gmail.com>
+Date:   Wed Sep 11 23:32:18 2024 -0500
+
+    Init
