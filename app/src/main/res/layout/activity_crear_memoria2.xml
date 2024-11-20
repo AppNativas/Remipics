@@ -175,18 +175,18 @@
             app:layout_constraintTop_toTopOf="@+id/modal_crear_memoria"
             app:layout_constraintVertical_bias="0.544" />
 
+
         <ImageView
             android:id="@+id/icon_ubi_m"
             android:layout_width="28dp"
             android:layout_height="29dp"
             app:layout_constraintBottom_toBottomOf="@+id/modal_crear_memoria"
             app:layout_constraintEnd_toEndOf="@+id/modal_crear_memoria"
-            app:layout_constraintHorizontal_bias="0.226"
+            app:layout_constraintHorizontal_bias="0.246"
             app:layout_constraintStart_toStartOf="@+id/modal_crear_memoria"
             app:layout_constraintTop_toTopOf="@+id/modal_crear_memoria"
-            app:layout_constraintVertical_bias="0.674"
+            app:layout_constraintVertical_bias="0.63"
             app:srcCompat="@drawable/icon_ubi_m" />
-
 
         <ImageView
             android:id="@+id/icon_fecha_m"
@@ -194,10 +194,10 @@
             android:layout_height="26dp"
             app:layout_constraintBottom_toBottomOf="@+id/modal_crear_memoria"
             app:layout_constraintEnd_toEndOf="@+id/modal_crear_memoria"
-            app:layout_constraintHorizontal_bias="0.226"
+            app:layout_constraintHorizontal_bias="0.236"
             app:layout_constraintStart_toStartOf="@+id/modal_crear_memoria"
             app:layout_constraintTop_toTopOf="@+id/modal_crear_memoria"
-            app:layout_constraintVertical_bias="0.799"
+            app:layout_constraintVertical_bias="0.796"
             app:srcCompat="@drawable/icon_fecha_m" />
 
         <Button
@@ -219,30 +219,30 @@
             android:id="@+id/enlace_ubi_m"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Agregar ubicación*"
-            android:textStyle="bold"
-            android:textColor="@color/secundario"
             android:onClick="openLocationPicker"
+            android:text="Agregar ubicación*"
+            android:textColor="@color/secundario"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/modal_crear_memoria"
             app:layout_constraintEnd_toEndOf="@+id/modal_crear_memoria"
-            app:layout_constraintHorizontal_bias="0.47"
+            app:layout_constraintHorizontal_bias="0.539"
             app:layout_constraintStart_toStartOf="@+id/modal_crear_memoria"
             app:layout_constraintTop_toBottomOf="@+id/titulo_album"
-            app:layout_constraintVertical_bias="0.68" />
+            app:layout_constraintVertical_bias="0.683" />
 
         <TextView
             android:id="@+id/enlace_fecha_m"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Agregar fecha*"
-            android:textStyle="bold"
             android:textColor="@color/secundario"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/modal_crear_memoria"
             app:layout_constraintEnd_toEndOf="@+id/modal_crear_memoria"
-            app:layout_constraintHorizontal_bias="0.42"
+            app:layout_constraintHorizontal_bias="0.555"
             app:layout_constraintStart_toStartOf="@+id/modal_crear_memoria"
             app:layout_constraintTop_toBottomOf="@+id/titulo_album"
-            app:layout_constraintVertical_bias="0.795" />
+            app:layout_constraintVertical_bias="0.793" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

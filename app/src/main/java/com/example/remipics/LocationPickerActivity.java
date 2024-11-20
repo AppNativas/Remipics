@@ -132,8 +132,7 @@ public class LocationPickerActivity extends AppCompatActivity implements OnMapRe
                 getDeviceLocation();
             } else {
                 Toast.makeText(this, "Se necesita el permiso de ubicación para seleccionar una dirección.", Toast.LENGTH_SHORT).show();
-
-            }
+                finish();    }
         }
     }
 
